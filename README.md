@@ -1,7 +1,5 @@
 **High Boost Filtering Implementation in Python** 🚀
 
-This repository contains Python implementations of the High Boost Filtering method, an image processing technique used to enhance high-frequency features in an image, resulting in a sharper and more detailed image.
-
 **Method High Boost Filtering** 📸
 
 High Boost Filtering is a technique that combines an original image with a low-frequency filtered version of the same image. Low-frequency filtering is applied to emphasize high-frequency features in the original image. This method is commonly used to increase sharpness and highlight fine details in photographs and images.
