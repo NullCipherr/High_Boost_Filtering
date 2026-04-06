@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.DS_Store
+.env
+.env.*
+
+# Artefatos gerados
+Output_Images/*_Sharpened.jpg

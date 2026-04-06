@@ -1,0 +1,20 @@
+[project]
+name = "high-boost-filtering"
+version = "1.0.0"
+description = "Aplicação de High Boost Filtering com interface Streamlit"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "NullCipherr" }
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

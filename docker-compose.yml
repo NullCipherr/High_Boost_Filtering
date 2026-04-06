@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: high-boost-filtering-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Input_Images:/app/Input_Images
+      - ./Output_Images:/app/Output_Images
+    restart: unless-stopped
