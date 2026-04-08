@@ -12,3 +12,6 @@ venv/
 
 # Artefatos gerados
 Output_Images/*_Sharpened.jpg
+
+# Documentos locais (não versionar)
+docs/CHECKLIST_TECNICO.md

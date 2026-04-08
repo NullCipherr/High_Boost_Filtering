@@ -1,22 +1,26 @@
-# Handoff Técnico
+# Handoff Tecnico
 
 ## Estado atual
 
-O projeto está estruturado para uso local e produção simples com Streamlit + Docker.
+Projeto estruturado com Streamlit + Docker + CI, agora evoluindo para suite de restauracao inteligente.
 
-Funcionalidades entregues:
+Funcionalidades ativas:
 
-- processamento por CLI;
-- interface web para upload/processamento/download;
-- persistência opcional da saída em `Output_Images/`;
-- validação automatizada com testes e lint;
-- CI de qualidade no GitHub Actions.
+- processamento classico por high boost;
+- modo auto adaptativo com presets classicos (denoise + high boost + clahe opcional);
+- preservacao de bordas no modo auto para reduzir efeito borrado;
+- diagnostico automatico de qualidade (score + recomendacao);
+- comparativo antes/depois na interface;
+- blend interativo antes/depois e mapa de diferenca com heatmap;
+- export de relatorio tecnico em JSON;
+- persistencia opcional em `Output_Images/`;
+- validacao automatizada com testes e lint.
 
-## Pontos de operação
+## Pontos de operacao
 
-- Entrada padrão do pipeline CLI: `Input_Images/`.
-- Saída padrão: `Output_Images/`.
-- Porta da aplicação Streamlit: `8501`.
+- Entrada padrao do pipeline CLI: `Input_Images/`.
+- Saida padrao: `Output_Images/`.
+- Porta da aplicacao Streamlit: `8501`.
 
 ## Comandos essenciais
 
@@ -28,14 +32,13 @@ make run-streamlit
 make docker-run
 ```
 
-## Contratos importantes
+## Contratos tecnicos importantes
 
-- `kernel_size` deve ser ímpar e >= 3.
-- `sigma` deve ser > 0.
-- Imagem é processada em escala de cinza.
+- `kernel_size` deve ser impar e >= 3.
+- `sigma` deve ser > 0 (ou auto quando habilitado na UI).
+- Diagnostico atual assume imagem em escala de cinza.
 
-## Próximos incrementos recomendados
+## Evolucao em andamento
 
-1. Adicionar processamento em lote no Streamlit.
-2. Incluir testes de integração para fluxo de upload/download.
-3. Adicionar versionamento semântico e changelog.
+- Roadmap estrategico: `docs/ROADMAP.md`.
+- Proximo incremento recomendado: persistir relatorio de qualidade por execucao para analise historica.
